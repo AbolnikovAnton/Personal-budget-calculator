@@ -78,6 +78,7 @@ class AppData{
     }
 
     showResult(){
+        const _this = this;
         budgetMonthValue.value = this.budgetMonth;
         budgetDayValue.value = this.budgetDay;
         expensesMonthValue.value = this.expensesMonth;
@@ -86,7 +87,6 @@ class AppData{
         targetMonthValue.value = Math.ceil(this.getTargetMonth());
         incomePeriodValue.value = this.calcPeriod();
         
-        const _this = this;
         periodSelect.addEventListener('input', this.calcPeriod.bind(_this));
     }
 
@@ -199,7 +199,7 @@ class AppData{
     }
 
     calcPeriod(){
-        periodAmount.innerText = periodSelect.value;
+        periodAmount.innerHTML = periodSelect.value;
         if(this.budgetMonth){
             incomePeriodValue.value = this.budgetMonth * periodSelect.value;
         }
