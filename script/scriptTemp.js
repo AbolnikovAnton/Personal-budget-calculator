@@ -231,17 +231,15 @@ resetAll(){
     this.deposit = false;
     this.percentDeposit = 0;
     this.moneyDeposit = 0;
-}
-
-eventsListeners(){
-    start.addEventListener('click', appData.start.bind(appData));
-    cancel.addEventListener('click', appData.resetAll);
-    expensesPlus.addEventListener('click', this.cloneBlocks.bind(this, 1));
-    incomePlus.addEventListener('click', this.cloneBlocks.bind(this));
-    periodSelect.addEventListener('input', appData.rangeChange);
     }
 }
-
+// eventsListeners(){
+//     start.addEventListener('click', appData.start.bind(appData));
+//     cancel.addEventListener('click', appData.resetAll);
+//     expensesPlus.addEventListener('click', this.cloneBlocks.bind(this, 1));
+//     incomePlus.addEventListener('click', this.cloneBlocks.bind(this));
+//     periodSelect.addEventListener('input', appData.rangeChange);
+//     }
 
 depositCheck.addEventListener('change', function(){
     if (depositCheck.checked) {
